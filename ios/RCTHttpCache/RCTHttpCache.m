@@ -7,9 +7,16 @@
 //
 
 #import "RCTHttpCache.h"
+
+#if __has_include(<React/RCTBridge.h>)
+#import <React/RCTBridge.h>
+#import <React/RCTImageLoader.h>
+#import <React/RCTImageCache.h>
+#else
 #import "RCTImageLoader.h"
 #import "RCTImageCache.h"
 #import "RCTBridge.h"
+#endif
 
 @implementation RCTHttpCache
 
